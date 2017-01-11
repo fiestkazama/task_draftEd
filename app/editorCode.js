@@ -1,5 +1,5 @@
 import React from "react";
-import { MegadraftEditor, editorStateFromRaw, createTypeStrategy} from "megadraft";
+import { MegadraftEditor, editorStateFromRaw} from "megadraft";
 import ToolTip from 'react-portal-tooltip';
 import {Panel} from 'react-bootstrap';
 
@@ -8,6 +8,7 @@ export default class MyEditApp extends React.Component {
     super(props);
     this.state = {editorState: editorStateFromRaw(null),
     isTooltipActive: false};
+    // change the state editor...
     this.onChange = (editorState) => {
       this.setState({editorState});
     }
@@ -22,7 +23,7 @@ export default class MyEditApp extends React.Component {
     }
 
 
-
+//Entry point
   render() {
 
     return (
